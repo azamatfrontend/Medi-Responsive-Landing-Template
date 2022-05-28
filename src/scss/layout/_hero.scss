@@ -1,0 +1,90 @@
+.hero {
+  background-color: $accent-2;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 992px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__data {
+    max-width: 416px;
+    color: #fff;
+  }
+
+  &__title {
+    font-size: 48px;
+    line-height: calc(72 / 48 * 100%);
+    margin: 0 0 20px 0;
+  }
+
+  &__description {
+    margin: 0 0 40px 0;
+  }
+
+  &__button {}
+
+  &__slider {
+    position: relative;
+  }
+
+  &__bottom {
+    display: flex;
+  }
+
+  &__bottom-item {
+    &:nth-child(odd) {
+      background-color: $accent-1;
+    }
+    flex: 1;
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 21px;
+    line-height: calc(31 / 21 * 100%);
+    &--one {
+      flex: 2;
+    }
+  }
+}
+
+.hero-slider {
+  &__button {
+    width: 62px;
+    height: 52px;
+    border: 1px solid #fff;
+    top: 69%;
+    user-select: none;
+
+    &--next.swiper-button-next {
+      left: -75px;
+    }
+
+    &--prev.swiper-button-prev {
+      left: -135px;
+      border-right-width: 0;
+    }
+
+    &--next.swiper-button-next::after,
+    &--prev.swiper-button-prev::after {
+      font-size: 0; 
+    }
+  }
+}
+
+.hero-swiper {
+  width: 746px;
+  height: 532px;
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+}

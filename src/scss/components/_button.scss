@@ -1,0 +1,13 @@
+.button {
+  text-transform: uppercase;
+  background-color: $accent-1;
+  min-height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
+  transition: 0.3s ease-in all;
+  &:hover {
+    background-color: darken($accent-1, 5%);
+  }
+}
